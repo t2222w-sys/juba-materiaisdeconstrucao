@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUBA Materiais de Construção | Tudo para a sua Obra ou Remodelação</title>
+    <meta name="description" content="Encontre os melhores materiais de construção na JUBA. Cimento, areia, ferramentas, tintas, cerâmicas e pladur com o melhor aconselhamento técnico e entrega rápida.">
+    <meta name="keywords" content="materiais de construção, juba, cimento, pladur, tintas, cerâmica, ferramentas, tubos, ferragens, sanindusa, secil, barbot, portugal">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="Logo/juba_icone.jpeg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para ícones modernos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="style.css?v=3">
+    
+    <!-- Dados Estruturados Google (JSON-LD LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "JUBA Materiais de Construção",
+      "image": "https://localhost:8080/Logo/juba_logo_horizontal.jpeg",
+      "@id": "https://localhost:8080/#home",
+      "url": "https://localhost:8080/",
+      "telephone": "+351966041356",
+      "email": "juba.materiais@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Estrada Nacional, Armazém JUBA",
+        "addressLocality": "Vidigueira",
+        "addressRegion": "Alentejo",
+        "postalCode": "7960",
+        "addressCountry": "PT"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 38.208889,
+        "longitude": -7.8078907
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "07:30",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "12:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 38.208889,
+          "longitude": -7.8078907
+        },
+        "geoRadius": "25000"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Cabeçalho (Navbar) -->
+    <header class="main-header" id="home">
+        <div class="header-container">
+            <a href="#home" class="logo-link">
+                <img src="Logo/juba_logo_horizontal.jpeg" alt="JUBA Materiais de Construção" class="main-logo" id="mainLogo">
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="active">Início</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#servicos">Serviços & Materiais</a></li>
+                    <li><a href="#como-funciona">Como Funciona</a></li>
+                    <li><a href="#horario">Horário</a></li>
+                    <li><a href="#marcas">Marcas</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contacto" class="btn-nav">Pedir Orçamento</a></li>
+                </ul>
+            </nav>
+            
+            <div class="mobile-cta">
+                <a href="#contacto" class="btn-mobile-cta"><i class="fa-solid fa-calculator"></i> Pedir Orçamento</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Secção Hero -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-container">
+            <div class="hero-badge">
+                <i class="fa-solid fa-hard-hat"></i> Parceiro de Confiança na Construção
+            </div>
+            <h1>O seu Armazém de Materiais de Construção na Vidigueira</h1>
+            <p>Fornecemos materiais de construção de alta fiabilidade, ferramentas profissionais e aconselhamento técnico especializado para que os seus projetos se tornem realidade com máxima eficiência.</p>
+            <div class="hero-actions">
+                <a href="#contacto" class="btn btn-primary btn-shimmer">Orçamento Gratuito</a>
+                <a href="#servicos" class="btn btn-outline">Explorar Materiais</a>
+            </div>
+        </div>
+        <div class="hero-features-bar">
+            <div class="feature-item">
+                <i class="fa-solid fa-truck"></i>
+                <div class="feature-text">
+                    <h4>Entregas Rápidas</h4>
+                    <p>Num raio de <span class="countup" data-target="25">0</span> km da Vidigueira</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-comments"></i>
+                <div class="feature-text">
+                    <h4>Apoio Especializado</h4>
+                    <p>Aconselhamento técnico</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-cubes"></i>
+                <div class="feature-text">
+                    <h4>Stock Permanente</h4>
+                    <p>Mais de <span class="countup" data-target="10000">0</span> referências</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção Soluções à Medida (Para Quem É) -->
+    <section class="audiences-section" id="solucoes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Soluções à Medida do seu Projeto</h2>
+                <div class="divider"></div>
+                <p>Seja para uma pequena reparação doméstica ou para uma obra de grande escala, temos as condições ideais para si.</p>
+            </div>
+            
+            <div class="audiences-grid">
+                <!-- Público 1: Particulares -->
+                <div class="audience-card b2c-card">
+                    <div class="audience-icon"><i class="fa-solid fa-house-chimney-user"></i></div>
+                    <h3>Para Clientes Particulares</h3>
+                    <p class="audience-subtitle">Está a planear uma remodelação ou pequena obra?</p>
+                    <ul class="audience-features">
+                        <li><i class="fa-solid fa-circle-check"></i> <span><strong>Aconselhamento Próximo:</strong> Ajudamos a escolher o material certo e a calcular as quantidades exatas de que necessita.</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span><strong>Sem Mínimos de Compra:</strong> Vendemos exatamente a quantidade necessária, sem desperdícios ou obrigatoriedades.</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span><strong>Orçamentos Transparentes:</strong> Propostas detalhadas e fáceis de compreender para controlar os seus custos.</span></li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-secondary">Apoio ao Meu Projeto</a>
+                </div>
+                
+                <!-- Público 2: Profissionais -->
+                <div class="audience-card b2b-card">
+                    <div class="audience-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                    <h3>Para Empresas & Profissionais</h3>
+                    <p class="audience-subtitle">Empreiteiros, construtores, eletricistas ou canalizadores?</p>
+                    <ul class="audience-features">
+                        <li><i class="fa-solid fa-circle-check"></i> <span><strong>Preços por Volume:</strong> Condições comerciais especiais e tabelas personalizadas para o seu negócio.</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span><strong>Garantia de Stock:</strong> Grande volume de materiais permanentes em armazém para evitar paragens na sua obra.</span></li>
+                        <li><i class="fa-solid fa-circle-check"></i> <span><strong>Logística de Entrega:</strong> Agendamento e descarregamento rápido de materiais pesados diretamente em obra.</span></li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-primary">Condições Especiais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção Horário e Estado em Tempo Real (Trust Element) -->
+    <section class="status-section" id="horario">
+        <div class="container">
+            <div class="status-card">
+                <div class="status-indicator-wrapper">
+                    <span class="status-pulse" id="statusPulse"></span>
+                    <span class="status-text" id="statusText">A verificar estado da loja...</span>
+                </div>
+                
+                <div class="schedule-grid">
+                    <div class="schedule-col">
+                        <i class="fa-regular fa-clock"></i>
+                        <div>
+                            <h5>Segunda a Sexta-feira</h5>
+                            <p class="schedule-time" id="weektime">07:30 - 13:00 / 15:00 - 19:00 (Verão)<br>08:00 - 13:00 / 14:30 - 18:30 (Inverno)</p>
+                        </div>
+                    </div>
+                    <div class="schedule-col border-left">
+                        <i class="fa-solid fa-calendar-day"></i>
+                        <div>
+                            <h5>Sábados</h5>
+                            <p class="schedule-time">08:00 - 12:00</p>
+                        </div>
+                    </div>
+                    <div class="schedule-col border-left">
+                        <i class="fa-solid fa-door-closed"></i>
+                        <div>
+                            <h5>Domingos</h5>
+                            <p class="schedule-time text-muted">Fechado para descanso</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção Serviços e Materiais -->
+    <section class="services-section" id="servicos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Materiais e Soluções Disponíveis</h2>
+                <div class="divider"></div>
+                <p>Agrupamos a nossa vasta gama de stock em 6 categorias principais para facilitar a escolha da solução ideal para a sua obra.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Categoria 1: Estrutura & Alvenaria -->
+                <div class="service-card">
+                    <div class="card-bg-img" style="background-image: url('https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-icon"><i class="fa-solid fa-trowel-bricks"></i></div>
+                    <h3>Estrutura & Alvenaria</h3>
+                    <p>Tudo para a base da sua construção: cimento, areia, brita, tijolos, blocos, abobadilhas, vigas de madeira, pranchas de cofragem, ferro estrutural, chapas e sistemas de pladur (gesso cartonado e perfis).</p>
+                    <a href="#contacto" class="btn-card-cta" data-category="materiais">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Categoria 2: Isolamento & Impermeabilização -->
+                <div class="service-card">
+                    <div class="card-bg-img" style="background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Isolamento & Impermeabilização</h3>
+                    <p>Garantia de conforto térmico e acústico: lã de rocha, EPS/XPS, telas asfálticas, membranas líquidas e o impermeabilizante asfáltico de referência <strong>Asfaltasol</strong> para proteger as suas fundações e coberturas.</p>
+                    <a href="#contacto" class="btn-card-cta" data-category="pladur">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Categoria 3: Acabamentos, Cerâmicas & Tintas -->
+                <div class="service-card">
+                    <div class="card-bg-img" style="background-image: url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-icon"><i class="fa-solid fa-paint-roller"></i></div>
+                    <h3>Acabamentos, Cerâmicas & Tintas</h3>
+                    <p>Mosaicos cerâmicos, azulejos modernos, pavimentos, grés de exterior e porcelanatos nobres retificados. Inclui tintas de alta cobertura (interiores/exteriores), vernizes protetores, primários e acessórios de pintura.</p>
+                    <a href="#contacto" class="btn-card-cta" data-category="cerâmica">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Categoria 4: Casas de Banho & Sanitários -->
+                <div class="service-card">
+                    <div class="card-bg-img" style="background-image: url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-icon"><i class="fa-solid fa-shower"></i></div>
+                    <h3>Casas de Banho & Sanitários</h3>
+                    <p>Equipamentos de design contemporâneo: sanitas, bidés, lavatórios, bases de duche, banheiras, misturadoras monocomando, colunas de duche, resguardos de vidro e acessórios metálicos inoxidáveis.</p>
+                    <a href="#contacto" class="btn-card-cta" data-category="canalização">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Categoria 5: Sistemas Técnicos (Elétrico & Canalização) -->
+                <div class="service-card">
+                    <div class="card-bg-img" style="background-image: url('https://images.unsplash.com/photo-1558211594-8e8f91001111?auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Sistemas Técnicos (Elétrico & Canalização)</h3>
+                    <p>Tubagens completas (multicamada, PPR, PVC), caixas de visita e saneamento. Cablagem elétrica, calhas, disjuntores de proteção, interruptores, tomadas e soluções de iluminação LED de alta eficiência.</p>
+                    <a href="#contacto" class="btn-card-cta" data-category="canalização">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <!-- Categoria 6: Ferramentas, Ferragens & Fixação -->
+                <div class="service-card">
+                    <div class="card-bg-img" style="background-image: url('https://images.unsplash.com/photo-1530124560676-41bc948e3993?auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="card-icon"><i class="fa-solid fa-screwdriver"></i></div>
+                    <h3>Ferramentas, Ferragens & Fixação</h3>
+                    <p>Ferramentas elétricas (berbequins, rebarbadoras) e manuais (tretas, colheres, martelos). Vasta gama de ferragens, fechaduras de alta segurança, dobradiças, parafusos, buchas e silicones industriais.</p>
+                    <a href="#contacto" class="btn-card-cta" data-category="ferramentas">Solicitar Orçamento <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção Como Funciona -->
+    <section class="how-it-works-section" id="como-funciona">
+        <div class="container">
+            <div class="section-title">
+                <h2>Como Funciona</h2>
+                <div class="divider"></div>
+                <p>Comprar ou pedir orçamento na JUBA é simples e sem complicações. Garantimos rapidez em todo o processo.</p>
+            </div>
+            <div class="steps-grid">
+                <!-- Passo 1 -->
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Faça o seu Pedido</h3>
+                    <p>Preencha o formulário online, envie a sua lista de materiais por e-mail ou fale connosco de forma instantânea através do WhatsApp.</p>
+                </div>
+                <!-- Passo 2 -->
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Receba o Orçamento</h3>
+                    <p>A nossa equipa técnica analisa o seu pedido e envia-lhe uma proposta detalhada com preços justos em menos de 24 horas úteis.</p>
+                </div>
+                <!-- Passo 3 -->
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Entrega ou Recolha</h3>
+                    <p>Agendamos a entrega rápida diretamente no local da sua obra (raio de 25 km da Vidigueira) ou preparamos a recolha no nosso armazém.</p>
+                </div>
+            </div>
+            
+            <div class="how-it-works-action">
+                <a href="#contacto" class="btn btn-primary btn-shimmer">Iniciar Orçamento Grátis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Comparativo de Orçamentos (Captador de Leads) -->
+    <section class="budget-compare-section">
+        <div class="container compare-container">
+            <div class="compare-content">
+                <span class="compare-tag">Economize Tempo e Dinheiro</span>
+                <h2>Já tem uma lista de materiais de outra loja?</h2>
+                <p>Não perca tempo a procurar e comparar item por item. Envie-nos a sua lista existente ou o orçamento da concorrência e nós apresentamos-lhe uma proposta comercial mais vantajosa com todo o aconselhamento técnico incluído.</p>
+            </div>
+            <div class="compare-actions">
+                <a href="https://wa.me/351966041356?text=Ol%C3%A1%2C%20tenho%20aqui%20uma%20lista%20de%20materiais%20e%20gostaria%20de%20saber%20se%20conseguem%20fazer%20um%20or%C3%A7amento%20equivalente." class="btn btn-primary btn-compare-wa" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i> Enviar Lista por WhatsApp
+                </a>
+                <a href="#contacto" class="btn btn-secondary">Submeter no Website</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção Marcas Parceiras (Carrossel Contínuo) -->
+    <section class="brands-section" id="marcas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Marcas de Confiança que Distribuímos</h2>
+                <div class="divider"></div>
+                <p>Trabalhamos com os fabricantes líderes em Portugal para garantir que a sua construção utiliza apenas materiais certificados.</p>
+            </div>
+        </div>
+        
+        <div class="brands-carousel-container">
+            <div class="brands-track" id="brandsTrack">
+                <!-- As marcas serão clonadas em JS para carrossel infinito, mas listadas inicialmente para SEO/Fallbacks -->
+                <div class="brand-slide"><img src="Marcas parceiras/Cimpor.jpeg" alt="Cimpor"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Secil.jpeg" alt="Secil"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Barbot.jpeg" alt="Barbot"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Dyrup.jpeg" alt="Dyrup"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/DeWalt.jpeg" alt="DeWalt"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Legrand.jpeg" alt="Legrand"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Valadares.jpeg" alt="Valadares"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Sanindusa.jpeg" alt="Sanindusa"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Efapel.jpeg" alt="Efapel"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Soudal.jpeg" alt="Soudal"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Saint gobian.jpeg" alt="Saint-Gobain"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cinca.jpeg" alt="Cinca"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Margres.jpeg" alt="Margres"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Preceram.jpeg" alt="Preceram"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Aslo.jpeg" alt="Aslo"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cerpeg.jpeg" alt="Cerpeg"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cinhell.jpeg" alt="Einhell"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cs- Coelho da silva.jpeg" alt="Coelho da Silva"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Fassa bartolo.jpeg" alt="Fassa Bartolo"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Gresco.jpeg" alt="Gresco"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Inegco.jpeg" alt="Inegco"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Mebra.jpeg" alt="Mebra"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Pecol.jpeg" alt="Pecol"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Thomaz dos santos.jpeg" alt="Thomaz dos Santos"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/bellota.jpeg" alt="Bellota"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/rodi.jpeg" alt="Rodi"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/rubi.jpeg" alt="Rubi"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/torneiras Monteiro.jpeg" alt="Torneiras Monteiro"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção Testemunhos (Prova Social) -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>O Que os Nossos Clientes Dizem</h2>
+                <div class="divider"></div>
+                <p>A satisfação de quem constrói e remodela com a JUBA é a nossa melhor garantia de qualidade e profissionalismo.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- Testemunho 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Excelente atendimento no armazém. Estava com dúvidas sobre o cálculo de pladur e isolamento para a minha remodelação e o apoio técnico foi impecável. Agendaram a entrega na Vidigueira no próprio dia!"</p>
+                    <div class="client-info">
+                        <h4>António Silva</h4>
+                        <span>Particular (Vidigueira)</span>
+                    </div>
+                </div>
+                <!-- Testemunho 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Como construtor profissional na região de Beja, exijo orçamentos rápidos e fornecedores fiáveis para não paralisar as equipas. Com a JUBA tenho propostas completas em menos de 24h e um stock de cimento e ferro sempre garantido."</p>
+                    <div class="client-info">
+                        <h4>Eng. Manuel Santos</h4>
+                        <span>Serrano & Santos Lda. (Profissional)</span>
+                    </div>
+                </div>
+                <!-- Testemunho 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Pedir orçamento pelo botão do WhatsApp foi muito prático e rápido. Responderam de imediato com ótimas condições para tintas Barbot e pavimentos porcelanatos. Recomendo vivamente a simpatia da equipa!"</p>
+                    <div class="client-info">
+                        <h4>Maria José</h4>
+                        <span>Remodelação Residencial (Cuba)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção Perguntas Frequentes (FAQs) -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Perguntas Frequentes (FAQ)</h2>
+                <div class="divider"></div>
+                <p>Esclareça as suas principais dúvidas sobre orçamentos, marcas e entregas de materiais na Vidigueira.</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <!-- FAQ 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Onde fica localizado o vosso armazém físico?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O nosso armazém está localizado na Estrada Nacional, na Vidigueira. Pode visitar-nos presencialmente para inspecionar os materiais de perto, receber aconselhamento técnico especializado ou levantar as suas encomendas diretamente.</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Fazem entregas ao domicílio ou no local da obra?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Dispomos de uma frota de transporte própria e adequada para cargas pesadas. Efetuamos entregas rápidas de materiais de construção diretamente no local da sua obra ou residência, num raio de até 25 km da Vidigueira.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual é o prazo de entrega dos materiais encomendados?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para materiais em stock permanente no nosso armazém, as entregas costumam ser efetuadas no próprio dia ou no dia útil seguinte. Para materiais especiais sob consulta ou encomenda, acordamos o prazo de entrega diretamente consigo no ato do orçamento.</p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como posso obter um orçamento e quanto tempo demoram a responder?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>É muito simples: preencha o formulário de contacto no final deste site, envie-nos um e-mail com a sua lista de materiais ou fale connosco de forma instantânea através do WhatsApp. Comprometemo-nos a analisar o seu pedido e enviar uma proposta detalhada com preços justos em menos de 24 horas úteis.</p>
+                    </div>
+                </div>
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vendem apenas a empresas de construção ou também a particulares?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Vendemos a ambos os públicos. Apoiamos desde o cliente particular que necessita de materiais e ferramentas para uma remodelação própria ou pequeno projeto, até empreiteiros, canalizadores, eletricistas e construtores civis que necessitam de volumes elevados de stock permanente e condições comerciais adequadas.</p>
+                    </div>
+                </div>
+                <!-- FAQ 6 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quais são os métodos de pagamento aceites?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aceitamos pagamentos por transferência bancária, numerário e cartões de débito/crédito no ato do levantamento em armazém ou no momento da entrega dos materiais de construção na sua obra.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-support-cta">
+                <p>Ainda tem alguma dúvida sobre os materiais, entregas ou preços?</p>
+                <a href="https://wa.me/351966041356?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20materiais%20de%20constru%C3%A7%C3%A3o%20da%20JUBA." class="btn-faq-wa" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i> Falar com a nossa Equipa pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção Contacto e Pedido de Orçamento (Alta Conversão) -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Informações e Trust -->
+                <div class="contact-info-block">
+                    <h2>Dê Vida ao seu Projeto de Construção</h2>
+                    <p class="lead-text">Quer seja uma pequena remodelação ou uma grande obra, temos os materiais certos e condições especiais para si.</p>
+                    
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-details">
+                                <span>Ligue Diretamente</span>
+                                <a href="tel:966041356">966 041 356</a>
+                                <a href="tel:969325291">969 325 291</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-details">
+                                <span>Envie-nos um E-mail</span>
+                                <a href="mailto:juba.materiais@gmail.com">juba.materiais@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-details">
+                                <span>Visite o Nosso Armazém</span>
+                                <p>Estrada Nacional, Armazém JUBA<br><strong>Vidigueira</strong>, Portugal</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                            <div class="info-details">
+                                <span>Área de Entrega</span>
+                                <p>Fazemos entregas num raio de <strong>25 km da Vidigueira</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mapa Incorporado de Localização -->
+                    <div class="map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12458.558334460715!2d-7.807890699999999!3d38.208889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1a3beea6701bbd%3A0x400ebbde49042b0!2sVidigueira!5e0!3m2!1spt-PT!2spt!4v1717258410293!5m2!1spt-PT!2spt" 
+                            width="100%" 
+                            height="220" 
+                            style="border:0; border-radius: 12px; margin-top: 30px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Formulário de Conversão -->
+                <div class="contact-form-block">
+                    <div class="form-header">
+                        <h3>Pedir Orçamento Gratuito</h3>
+                        <p>Preencha os campos e entraremos em contacto em menos de 24 horas úteis.</p>
+                    </div>
+                    
+                    <div class="form-trust-badges">
+                        <div class="badge-item"><i class="fa-solid fa-check-double"></i> Sem Compromisso</div>
+                        <div class="badge-item"><i class="fa-solid fa-bolt"></i> Proposta Rápida</div>
+                        <div class="badge-item"><i class="fa-solid fa-user-tie"></i> Apoio Técnico</div>
+                        <div class="badge-item"><i class="fa-solid fa-truck-ramp-box"></i> Entrega Local</div>
+                    </div>
+                    
+                    <form id="quoteForm" novalidate>
+                        <div class="form-group">
+                            <label for="userName">Nome Completo <span class="required">*</span></label>
+                            <input type="text" id="userName" name="name" placeholder="Ex: João Silva" required>
+                            <span class="error-msg" id="nameError">Por favor, introduza o seu nome.</span>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userPhone">Telemóvel <span class="required">*</span></label>
+                                <input type="tel" id="userPhone" name="phone" placeholder="Ex: 912 345 678" required>
+                                <span class="error-msg" id="phoneError">Introduza um contacto de 9 dígitos válido.</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="userEmail">E-mail <span class="required">*</span></label>
+                                <input type="email" id="userEmail" name="email" placeholder="Ex: joao@email.com" required>
+                                <span class="error-msg" id="emailError">Introduza um endereço de e-mail válido.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="materialType">O que Procura? <span class="required">*</span></label>
+                            <select id="materialType" name="type" required>
+                                <option value="" disabled selected>Selecione uma opção...</option>
+                                <option value="materiais">Materiais de Construção Geral</option>
+                                <option value="pladur">Pladur e Isolamentos</option>
+                                <option value="cerâmica">Pavimentos e Cerâmicas</option>
+                                <option value="canalização">Canalização e Sanitários</option>
+                                <option value="tintas">Tintas e Pintura</option>
+                                <option value="ferramentas">Ferramentas e Ferragens</option>
+                                <option value="outro">Outro (Especificar na mensagem)</option>
+                            </select>
+                            <span class="error-msg" id="typeError">Selecione uma categoria de materiais.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userMessage">Mensagem / Lista de Materiais</label>
+                            <textarea id="userMessage" name="message" rows="4" placeholder="Descreva os materiais e quantidades de que necessita para o seu orçamento..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budgetFile">Anexar Lista ou Orçamento Existente <span class="file-optional">(Opcional - PDF, Imagem, Excel)</span></label>
+                            <div class="file-upload-wrapper">
+                                <input type="file" id="budgetFile" name="budgetFile" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xls,.xlsx">
+                                <div class="file-upload-trigger">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    <span id="fileNameSpan">Escolha um ficheiro ou arraste-o aqui</span>
+                                </div>
+                            </div>
+                            <span class="file-help-text">Tamanho máximo: 10 MB. Formatos aceites: PDF, JPG, PNG, Excel, Word.</span>
+                        </div>
+
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <span>Enviar Pedido de Orçamento</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    
+                    <!-- Feedback de Sucesso (Oculto inicialmente) -->
+                    <div class="form-success-alert" id="formSuccessAlert">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h4>Pedido Enviado com Sucesso!</h4>
+                        <p>Obrigado pela sua mensagem. A equipa da JUBA irá analisar o seu pedido e responder nas próximas 24 horas úteis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <img src="Logo/juba_logo_horizontal.jpeg" alt="JUBA Logo" class="footer-logo">
+                    <p>A sua referência no fornecimento de materiais de construção de confiança. Garantimos aconselhamento profissional e produtos certificados para obras residenciais, industriais e públicas.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Ligações Rápidas</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#solucoes">Soluções por Projeto</a></li>
+                        <li><a href="#servicos">Serviços & Materiais</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#horario">Horário de Funcionamento</a></li>
+                        <li><a href="#marcas">As Nossas Marcas</a></li>
+                        <li><a href="#faq">Perguntas Frequentes (FAQ)</a></li>
+                        <li><a href="#contacto">Pedir Orçamento</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contacts">
+                    <h4>Contactos & Localização</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:966041356">966 041 356</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:969325291">969 325 291</a></li>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:juba.materiais@gmail.com">juba.materiais@gmail.com</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i> Estrada Nacional, Armazém JUBA, Vidigueira</li>
+                        <li><i class="fa-solid fa-truck"></i> Entregas num raio de 25 km da Vidigueira</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 JUBA Materiais de Construção. Todos os direitos reservados.</p>
+                <p>Criado de forma profissional.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo (Usabilidade) -->
+    <button class="back-to-top-btn" id="backToTopBtn" aria-label="Voltar ao Topo">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Botão Flutuante do WhatsApp (Conversão Rápida) -->
+    <a href="https://wa.me/351966041356?text=Ol%C3%A1%2C%20gostaria%20de%20obter%20um%20or%C3%A7amento%20para%20materiais%20de%20constru%C3%A7%C3%A3o%20da%20JUBA." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacto via WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+    <!-- JavaScript Customizado -->
+    <script src="script.js?v=3"></script>
+</body>
+</html>
