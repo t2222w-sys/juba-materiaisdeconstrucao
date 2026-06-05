@@ -162,11 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const brandsTrack = document.getElementById('brandsTrack');
     if (brandsTrack) {
         const slides = Array.from(brandsTrack.children);
-        // Clonar o conjunto de marcas 2 vezes para garantir fluxo contínuo e sem interrupções visuais no loop CSS
-        slides.forEach(slide => {
-            const clone = slide.cloneNode(true);
-            brandsTrack.appendChild(clone);
-        });
+        // Clonar o conjunto de marcas 1 vez para garantir fluxo contínuo e sem interrupções visuais no loop CSS de 50%
         slides.forEach(slide => {
             const clone = slide.cloneNode(true);
             brandsTrack.appendChild(clone);
