@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ==========================================================================
        6. SCROLL REVEAL (EFEITOS VISUAIS SUAVES DE INTERAÇÃO)
        ========================================================================== */
-    const revealElements = document.querySelectorAll('.service-card, .status-card, .section-title, .step-card, .faq-item, .audience-card, .testimonial-card');
+    const revealElements = document.querySelectorAll('.service-card, .status-card, .section-title, .step-card, .faq-item, .audience-card, .testimonial-card, .delivery-card');
     
     const checkReveal = () => {
         const triggerBottom = window.innerHeight * 0.85;

@@ -256,7 +256,7 @@ section {
 }
 
 .main-logo {
-    height: 48px;
+    height: 60px;
     width: auto;
     object-fit: contain;
     transition: var(--transition);
@@ -1144,7 +1144,7 @@ section {
 }
 
 .footer-logo {
-    height: 48px;
+    height: 60px;
     width: auto;
     object-fit: contain;
     align-self: flex-start;
@@ -1245,7 +1245,7 @@ section {
     }
     
     .main-logo {
-        height: 36px;
+        height: 42px;
     }
     
     .mobile-cta {
@@ -2168,9 +2168,171 @@ section {
     color: #FFFFFF;
 }
 
+/* ==========================================================================
+   SECÇÃO ÁREA DE DISTRIBUIÇÃO E ENTREGAS
+   ========================================================================== */
+.delivery-section {
+    background-color: var(--bg-white);
+    padding: 100px 0;
+}
 
+.delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
 
+.delivery-card {
+    background-color: var(--bg-main);
+    border-radius: var(--radius-md);
+    padding: 30px 20px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
 
+.delivery-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--secondary);
+    transition: var(--transition);
+}
 
+.delivery-card:nth-child(even)::before {
+    background-color: var(--primary);
+}
 
+.delivery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(230, 95, 0, 0.2);
+}
+
+.delivery-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.delivery-card-header i {
+    font-size: 1.25rem;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.delivery-card:hover .delivery-card-header i {
+    transform: scale(1.1) translateY(-2px);
+}
+
+.delivery-card-header h3 {
+    font-size: 1.2rem;
+    font-family: var(--font-title);
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.delivery-locations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.delivery-locations-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.delivery-locations-list li i {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.delivery-card:hover .delivery-locations-list li {
+    color: var(--secondary);
+}
+
+.delivery-card:hover .delivery-locations-list li i {
+    color: var(--primary);
+    transform: translateX(2px);
+}
+
+/* Barra inferior informativa */
+.delivery-footer-bar {
+    margin-top: 50px;
+    background-color: var(--primary-light);
+    border: 1px solid rgba(230, 95, 0, 0.15);
+    border-radius: var(--radius-md);
+    padding: 24px 30px;
+    box-shadow: var(--shadow-sm);
+}
+
+.delivery-footer-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.delivery-footer-content i {
+    font-size: 2rem;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.delivery-footer-content p {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .delivery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .delivery-section {
+        padding: 80px 0;
+    }
+    
+    .delivery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .delivery-footer-bar {
+        padding: 20px;
+    }
+    
+    .delivery-footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .delivery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
 
