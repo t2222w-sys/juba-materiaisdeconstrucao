@@ -22,15 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navMenu = document.getElementById('navMenu');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
     const navLinks = navMenu.querySelectorAll('a');
 
     const toggleMenu = () => {
         mobileMenuBtn.classList.toggle('open');
         navMenu.classList.toggle('open');
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.classList.toggle('open');
+        }
         document.body.classList.toggle('overflow-hidden');
     };
 
-    mobileMenuBtn.addEventListener('click', toggleMenu);
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+    }
+    
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', toggleMenu);
+    }
 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {

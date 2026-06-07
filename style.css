@@ -61,6 +61,10 @@ body {
     overflow-x: hidden;
 }
 
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -1360,6 +1364,41 @@ section {
         transform: translateY(-9px) rotate(-45deg);
     }
     
+    /* Overlay do Menu Móvel */
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(13, 15, 18, 0.5);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        z-index: 1040;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+    }
+    
+    .mobile-menu-overlay.open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Otimização dos Botões Flutuantes no Mobile */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+    }
+    
+    .whatsapp-float svg {
+        width: 26px;
+        height: 26px;
+    }
+    
     /* Hero */
     .hero-section {
         padding-top: 100px;
@@ -1839,7 +1878,7 @@ section {
         width: 50px;
         height: 50px;
         bottom: 20px;
-        right: 90px;
+        right: 80px;
     }
 }
 
@@ -2330,6 +2369,27 @@ section {
 }
 
 @media (max-width: 480px) {
+    section {
+        padding: 50px 0 !important;
+    }
+    
+    .hero-section {
+        padding-top: 100px !important;
+        padding-bottom: 40px !important;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.85rem !important;
+    }
+
+    .section-title h2 {
+        font-size: 1.65rem !important;
+    }
+    
+    .container {
+        padding: 0 16px !important;
+    }
+
     .delivery-grid {
         grid-template-columns: 1fr;
         gap: 16px;
