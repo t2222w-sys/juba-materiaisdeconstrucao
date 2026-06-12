@@ -456,5 +456,158 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    /* ==========================================================================
+       12. CONTROLO DO SLIDER DE INSPIRAÇÃO & AMBIENTES
+       ========================================================================== */
+    const filterButtons = document.querySelectorAll('.inspiration-filters .filter-btn');
+    const slides = document.querySelectorAll('.inspiration-slide');
+    const sliderTrack = document.getElementById('sliderTrack');
+    const prevBtn = document.getElementById('sliderPrevBtn');
+    const nextBtn = document.getElementById('sliderNextBtn');
+    const indicatorsContainer = document.getElementById('sliderIndicators');
+
+    if (slides.length > 0 && sliderTrack) {
+        let activeFilter = 'casas-banho'; // Categoria inicial ativa por defeito
+        let activeIndex = 0;
+        let visibleSlides = [];
+
+        // Atualiza a lista de slides visíveis de acordo com a categoria
+        function updateVisibleSlides() {
+            visibleSlides = Array.from(slides).filter(slide => {
+                const category = slide.getAttribute('data-category');
+                if (category === activeFilter) {
+                    slide.classList.remove('hide-slide');
+                    return true;
+                } else {
+                    slide.classList.add('hide-slide');
+                    return false;
+                }
+            });
+        }
+
+        // Atualiza o estado visual e clique das setas nos limites
+        function updateArrowStates() {
+            if (!prevBtn || !nextBtn) return;
+            
+            if (activeIndex === 0) {
+                prevBtn.classList.add('disabled');
+                prevBtn.setAttribute('disabled', 'true');
+            } else {
+                prevBtn.classList.remove('disabled');
+                prevBtn.removeAttribute('disabled');
+            }
+
+            if (activeIndex === visibleSlides.length - 1) {
+                nextBtn.classList.add('disabled');
+                nextBtn.setAttribute('disabled', 'true');
+            } else {
+                nextBtn.classList.remove('disabled');
+                nextBtn.removeAttribute('disabled');
+            }
+        }
+
+        // Navega para um índice específico de slide visível
+        function goToSlide(index) {
+            if (visibleSlides.length === 0) return;
+
+            // Restringir a navegação de forma linear nas extremidades
+            if (index < 0) {
+                activeIndex = 0;
+            } else if (index >= visibleSlides.length) {
+                activeIndex = visibleSlides.length - 1;
+            } else {
+                activeIndex = index;
+            }
+
+            // Deslocar a track com base nos slides visíveis (cada slide ocupa 100% de largura)
+            sliderTrack.style.transform = `translateX(-${activeIndex * 100}%)`;
+            updateIndicators();
+            updateArrowStates();
+        }
+
+        // Cria os pontos indicadores inferiores (dots) dinamicamente
+        function createIndicators() {
+            if (!indicatorsContainer) return;
+            indicatorsContainer.innerHTML = '';
+            visibleSlides.forEach((_, idx) => {
+                const dot = document.createElement('button');
+                dot.className = 'indicator-dot';
+                if (idx === activeIndex) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Ir para slide ${idx + 1}`);
+                dot.addEventListener('click', () => {
+                    goToSlide(idx);
+                });
+                indicatorsContainer.appendChild(dot);
+            });
+        }
+
+        // Atualiza a classe ativa do ponto indicador selecionado
+        function updateIndicators() {
+            if (!indicatorsContainer) return;
+            const dots = indicatorsContainer.querySelectorAll('.indicator-dot');
+            dots.forEach((dot, idx) => {
+                if (idx === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Setas laterais de navegação
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                goToSlide(activeIndex - 1);
+            });
+            nextBtn.addEventListener('click', () => {
+                goToSlide(activeIndex + 1);
+            });
+        }
+
+        // Alternância de abas de filtragem (Cozinha / Pavimentos)
+        if (filterButtons.length > 0) {
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    activeFilter = button.getAttribute('data-filter');
+                    activeIndex = 0; // Reiniciar o carrossel no primeiro slide da nova categoria
+
+                    updateVisibleSlides();
+                    createIndicators();
+                    goToSlide(0);
+                });
+            });
+        }
+
+        // Suporte para gestos de arrasto (Swipe) no ecrã tátil (mobile)
+        let startX = 0;
+        let endX = 0;
+
+        sliderTrack.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        }, { passive: true });
+
+        sliderTrack.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            // Limiar de sensibilidade do swipe (50 píxeis)
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    goToSlide(activeIndex + 1); // Deslizar para a esquerda -> seguinte
+                } else {
+                    goToSlide(activeIndex - 1); // Deslizar para a direita -> anterior
+                }
+            }
+        }, { passive: true });
+
+        // Inicialização
+        updateVisibleSlides();
+        createIndicators();
+        goToSlide(0);
+    }
 });
 

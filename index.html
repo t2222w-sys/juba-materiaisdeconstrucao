@@ -95,6 +95,7 @@
                     <li><a href="#solucoes">Soluções</a></li>
                     <li><a href="#servicos">Serviços & Materiais</a></li>
                     <li><a href="#como-funciona">Como Funciona</a></li>
+                    <li><a href="#inspiracao">Inspiração</a></li>
                     <li><a href="#horario">Horário</a></li>
                     <li><a href="#marcas">Marcas</a></li>
                     <li><a href="#faq">FAQ</a></li>
@@ -339,6 +340,251 @@
                 </a>
                 <a href="#contacto" class="btn btn-secondary">Submeter no Website</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Secção Galeria de Inspiração & Ambientes -->
+    <section class="inspiration-section" id="inspiracao">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeria de Inspiração & Ambientes</h2>
+                <div class="divider"></div>
+                <p>Descubra exemplos de combinações de materiais que disponibilizamos. Selecione uma categoria e explore os ambientes nas suas proporções originais.</p>
+            </div>
+            
+            <!-- Abas de Filtros (Casas de Banho, Cozinha e Pavimentos) -->
+            <div class="inspiration-filters">
+                <button class="filter-btn active" data-filter="casas-banho">Casas de Banho</button>
+                <button class="filter-btn" data-filter="cozinhas">Cozinha</button>
+                <button class="filter-btn" data-filter="pavimentos">Pavimentos</button>
+            </div>
+            
+            <!-- Slider de Ambientes -->
+            <div class="inspiration-slider-container">
+                <!-- Seta de Navegação Esquerda -->
+                <button class="slider-arrow prev-btn" id="sliderPrevBtn" aria-label="Anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <!-- Janela de Visualização (Viewport) -->
+                <div class="inspiration-slider-viewport">
+                    <div class="inspiration-slider-track" id="sliderTrack">
+                        
+                        <!-- Slide 1: Casa de Banho Minimalista -->
+                        <div class="inspiration-slide" data-category="casas-banho">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/casa de banho.jpeg" alt="Casa de Banho Minimalista" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Casa de Banho Minimalista</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Revestimento de parede geométrico em espinha Cinca, lavatório redondo de pousar Sanindusa, chuveiro embutido e misturadora preta mate Torneiras Monteiro e radiador toalheiro preto mate.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2: Casa de Banho Rústica-Chic -->
+                        <div class="inspiration-slide" data-category="casas-banho">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/casa de banho 2.jpeg" alt="Casa de Banho Rústica-Chic" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Casa de Banho Rústica-Chic</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Azulejo de parede com padrão hidráulico preto e branco Cinca, combinado com bancada suspensa de carvalho rústico, lavatório oval em pedra escura Sanindusa e misturadora de parede cromada Torneiras Monteiro.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3: Casa de Banho Mármore Calacatta -->
+                        <div class="inspiration-slide" data-category="casas-banho">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/casa de banho completa.jpeg" alt="Casa de Banho Mármore Calacatta" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Casa de Banho Mármore Calacatta</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Pavimento e revestimento porcelânico Calacatta retificado Margres, banheira de pousar independente preta Valadares, misturadora de chão cromada Torneiras Monteiro e painel de duche em vidro temperado Sanindusa.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4: Casa de Banho Dupla Ondulada -->
+                        <div class="inspiration-slide" data-category="casas-banho">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/casa de  banho completa 2.jpeg" alt="Casa de Banho Dupla Ondulada" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Casa de Banho Dupla Ondulada</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Revestimento cerâmico branco mate com textura ondulada Margres, lavatório duplo em pedra cinza sobre móvel suspenso em carvalho e misturadoras cromadas de parede Torneiras Monteiro.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 5: Casa de Banho Cimento Natural -->
+                        <div class="inspiration-slide" data-category="casas-banho">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/casa de banho completa 3 .jpeg" alt="Casa de Banho Cimento Natural" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Casa de Banho Cimento Natural</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Ladrilhos porcelânicos retificados de efeito cimento Margres, bancada suspensa de cimento com lavatório integrado, misturadora de chão e misturadora de parede em preto mate Torneiras Monteiro.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 6: Cozinha Azul Industrial -->
+                        <div class="inspiration-slide" data-category="cozinhas">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/cozinha.jpeg" alt="Cozinha Azul Industrial" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Cozinha Azul Industrial</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Revestimento de parede em filetes cerâmicos lineares Cinca, combinado com armários de cozinha em azul-petróleo com tampo branco, misturadora cromada de bica alta e lava-louça branco Rodi.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 7: Bancada Tijolo de Metro -->
+                        <div class="inspiration-slide" data-category="cozinhas">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/Bancada de cozinha.jpeg" alt="Bancada Tijolo de Metro" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Bancada Tijolo de Metro</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Revestimento de parede tipo tijolo de metro de efeito mármore cinzento Margres, lava-louça duplo encastrado em aço inoxidável e misturadora de bica quadrada Rodi.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 8: Cozinha Oceano Vidrado -->
+                        <div class="inspiration-slide" data-category="cozinhas">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/Bancada de cozinha 2.jpeg" alt="Cozinha Oceano Vidrado" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Cozinha Oceano Vidrado</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Azulejo vertical brilhante azul-turquesa Cinca, bancada de mármore Carrara com gavetas em carvalho, fixado com cimento cola Secil de alta aderência e juntas impermeáveis Soudal.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 9: Bancada e Balcão de Cozinha -->
+                        <div class="inspiration-slide" data-category="cozinhas">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/Cozinha bancada e bancos.jpeg" alt="Bancada e Balcão de Cozinha" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Bancada e Balcão de Cozinha</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Revestimento e pavimento cerâmico com padrão hidráulico Cerpeg, prancha suspensa de refeições em madeira e bancos rústicos, com paredes finalizadas em tinta cinza mate lavável Barbot.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 10: Espaço Exterior Minimalista -->
+                        <div class="inspiration-slide" data-category="pavimentos">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/Pavimento externo.jpeg" alt="Espaço Exterior Minimalista" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Espaço Exterior Minimalista</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Pavimento cerâmico antiderrapante de efeito terrazzo bege Margres, caixilharia de correr preta, assentamento com cimento cola Secil de alta flexibilidade e revestimento de fachada com argamassa Fassa Bartolo.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 11: Pátio Rústico de Exterior -->
+                        <div class="inspiration-slide" data-category="pavimentos">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/pavimento externo 2.jpeg" alt="Pátio Rústico de Exterior" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Pátio Rústico de Exterior</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Ladrilhos cerâmicos antiderrapantes de efeito pedra natural destonalizada Cinca, ideais para áreas exteriores de tráfego elevado com cimentos Secil e juntas elásticas Soudal.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 12: Sala de Estar Acolhedora -->
+                        <div class="inspiration-slide" data-category="pavimentos">
+                            <div class="slide-content">
+                                <div class="slide-img-wrapper">
+                                    <img src="fotos/chao de tacos sala.jpeg" alt="Sala de Estar Acolhedora" loading="lazy">
+                                </div>
+                                <div class="slide-info">
+                                    <h3>Sala de Estar Acolhedora</h3>
+                                    <div class="slide-desc-wrapper">
+                                        <p class="slide-label">Combinação Sugerida</p>
+                                        <p class="slide-desc">Pavimento cerâmico de efeito madeira em tacos de xadrez Margres, tinta de interior mate Barbot de tons suaves, rodapés de alta densidade Preceram e porta de correr com perfil industrial.</p>
+                                    </div>
+                                    <a href="#contacto" class="btn btn-primary slide-cta">Solicitar Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Seta de Navegação Direita -->
+                <button class="slider-arrow next-btn" id="sliderNextBtn" aria-label="Seguinte">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- Pontos Indicadores (Dots) -->
+            <div class="slider-indicators" id="sliderIndicators"></div>
         </div>
     </section>
 
