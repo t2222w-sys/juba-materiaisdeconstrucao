@@ -2417,8 +2417,8 @@ section {
 /* Conteúdo interno do slide */
 .slide-content {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    min-height: 400px;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    min-height: 360px;
     width: 100%;
 }
 
@@ -2429,7 +2429,7 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: 400px;
+    height: 100%; /* Herda a altura total da grid do card, eliminando tiras brancas */
     width: 100%;
     min-width: 0;
 }
