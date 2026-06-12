@@ -2418,7 +2418,7 @@ section {
 .slide-content {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    min-height: 480px;
+    min-height: 400px;
     width: 100%;
 }
 
@@ -2429,7 +2429,7 @@ section {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: 480px;
+    height: 400px;
     width: 100%;
     min-width: 0;
 }
