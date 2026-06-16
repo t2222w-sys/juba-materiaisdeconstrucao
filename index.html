@@ -7,6 +7,9 @@
     <meta name="description" content="Encontre os melhores materiais de construção na JUBA. Cimento, areia, ferramentas, tintas, cerâmicas e pladur com o melhor aconselhamento técnico e entrega rápida.">
     <meta name="keywords" content="materiais de construção, juba, cimento, pladur, tintas, cerâmica, ferramentas, tubos, ferragens, sanindusa, secil, barbot, portugal">
     
+    <!-- Pré-carregar Imagem de Fundo do Hero (LCP) -->
+    <link rel="preload" as="image" href="fotos/hero_bg.webp">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Logo/juba_icone.png">
     
@@ -15,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome para ícones modernos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FontAwesome carregado assincronamente (Não-bloqueante) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <!-- CSS Customizado -->
     <link rel="stylesheet" href="style.css">
@@ -374,8 +377,7 @@
                         <div class="inspiration-slide" data-category="casas-banho">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/casa de banho.jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/casa de banho.jpeg" class="slide-fg-img" alt="Casa de Banho Minimalista" loading="lazy">
+                                    <img src="fotos/casa de banho.jpeg" alt="Casa de Banho Minimalista" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Casa de Banho Minimalista</h3>
@@ -392,8 +394,7 @@
                         <div class="inspiration-slide" data-category="casas-banho">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/casa de banho 2.jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/casa de banho 2.jpeg" class="slide-fg-img" alt="Casa de Banho Rústica-Chic" loading="lazy">
+                                    <img src="fotos/casa de banho 2.jpeg" alt="Casa de Banho Rústica-Chic" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Casa de Banho Rústica-Chic</h3>
@@ -410,8 +411,7 @@
                         <div class="inspiration-slide" data-category="casas-banho">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/casa de banho completa.jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/casa de banho completa.jpeg" class="slide-fg-img" alt="Casa de Banho Mármore Calacatta" loading="lazy">
+                                    <img src="fotos/casa de banho completa.jpeg" alt="Casa de Banho Mármore Calacatta" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Casa de Banho Mármore Calacatta</h3>
@@ -428,8 +428,7 @@
                         <div class="inspiration-slide" data-category="casas-banho">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/casa de  banho completa 2.jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/casa de  banho completa 2.jpeg" class="slide-fg-img" alt="Casa de Banho Dupla Ondulada" loading="lazy">
+                                    <img src="fotos/casa de  banho completa 2.jpeg" alt="Casa de Banho Dupla Ondulada" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Casa de Banho Dupla Ondulada</h3>
@@ -446,8 +445,7 @@
                         <div class="inspiration-slide" data-category="casas-banho">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/casa de banho completa 3 .jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/casa de banho completa 3 .jpeg" class="slide-fg-img" alt="Casa de Banho Cimento Natural" loading="lazy">
+                                    <img src="fotos/casa de banho completa 3 .jpeg" alt="Casa de Banho Cimento Natural" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Casa de Banho Cimento Natural</h3>
@@ -464,8 +462,7 @@
                         <div class="inspiration-slide" data-category="cozinhas">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/cozinha.jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/cozinha.jpeg" class="slide-fg-img" alt="Cozinha Azul Industrial" loading="lazy">
+                                    <img src="fotos/cozinha.jpeg" alt="Cozinha Azul Industrial" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Cozinha Azul Industrial</h3>
@@ -482,8 +479,7 @@
                         <div class="inspiration-slide" data-category="cozinhas">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/Bancada de cozinha.jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/Bancada de cozinha.jpeg" class="slide-fg-img" alt="Bancada Tijolo de Metro" loading="lazy">
+                                    <img src="fotos/Bancada de cozinha.jpeg" alt="Bancada Tijolo de Metro" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Bancada Tijolo de Metro</h3>
@@ -500,8 +496,7 @@
                         <div class="inspiration-slide" data-category="cozinhas">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/Bancada de cozinha 2.jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/Bancada de cozinha 2.jpeg" class="slide-fg-img" alt="Cozinha Oceano Vidrado" loading="lazy">
+                                    <img src="fotos/Bancada de cozinha 2.jpeg" alt="Cozinha Oceano Vidrado" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Cozinha Oceano Vidrado</h3>
@@ -518,8 +513,7 @@
                         <div class="inspiration-slide" data-category="cozinhas">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/Cozinha bancada e bancos.jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/Cozinha bancada e bancos.jpeg" class="slide-fg-img" alt="Bancada e Balcão de Cozinha" loading="lazy">
+                                    <img src="fotos/Cozinha bancada e bancos.jpeg" alt="Bancada e Balcão de Cozinha" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Bancada e Balcão de Cozinha</h3>
@@ -536,8 +530,7 @@
                         <div class="inspiration-slide" data-category="pavimentos">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/Pavimento externo.jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/Pavimento externo.jpeg" class="slide-fg-img" alt="Espaço Exterior Minimalista" loading="lazy">
+                                    <img src="fotos/Pavimento externo.jpeg" alt="Espaço Exterior Minimalista" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Espaço Exterior Minimalista</h3>
@@ -554,8 +547,7 @@
                         <div class="inspiration-slide" data-category="pavimentos">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/pavimento externo 2.jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/pavimento externo 2.jpeg" class="slide-fg-img" alt="Pátio Rústico de Exterior" loading="lazy">
+                                    <img src="fotos/pavimento externo 2.jpeg" alt="Pátio Rústico de Exterior" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Pátio Rústico de Exterior</h3>
@@ -572,8 +564,7 @@
                         <div class="inspiration-slide" data-category="pavimentos">
                             <div class="slide-content">
                                 <div class="slide-img-wrapper">
-                                    <img src="fotos/chao de tacos sala.jpeg" class="slide-bg-blur" alt="" aria-hidden="true">
-                                    <img src="fotos/chao de tacos sala.jpeg" class="slide-fg-img" alt="Sala de Estar Acolhedora" loading="lazy">
+                                    <img src="fotos/chao de tacos sala.jpeg" alt="Sala de Estar Acolhedora" loading="lazy">
                                 </div>
                                 <div class="slide-info">
                                     <h3>Sala de Estar Acolhedora</h3>
@@ -613,34 +604,34 @@
         <div class="brands-carousel-container">
             <div class="brands-track" id="brandsTrack">
                 <!-- As marcas serão clonadas em JS para carrossel infinito, mas listadas inicialmente para SEO/Fallbacks -->
-                <div class="brand-slide"><img src="Marcas parceiras/Cimpor.jpeg" alt="Cimpor"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/secil.jpeg" alt="Secil"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Barbot.jpeg" alt="Barbot"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Dyrup.jpeg" alt="Dyrup"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/DeWalt.jpeg" alt="DeWalt"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/legrand.jpeg" alt="Legrand"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/valadares.jpeg" alt="Valadares"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/sanindusa.jpeg" alt="Sanindusa"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Efapel.jpeg" alt="Efapel"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/soudal.jpeg" alt="Soudal"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Saint gobian.jpeg" alt="Saint-Gobain"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/cinca.jpeg" alt="Cinca"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/margres.jpeg" alt="Margres"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/preceram.jpeg" alt="Preceram"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Aslo.jpeg" alt="Aslo"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Cerpeg.jpeg" alt="Cerpeg"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Cinhell.jpeg" alt="Einhell"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Cs- Coelho da silva.jpeg" alt="Coelho da Silva"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Fassa bartolo.jpeg" alt="Fassa Bartolo"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Gresco.jpeg" alt="Gresco"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Inegco.jpeg" alt="Inegco"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Mebra.jpeg" alt="Mebra"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Pecol.jpeg" alt="Pecol"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Thomaz dos santos.jpeg" alt="Thomaz dos Santos"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/bellota.jpeg" alt="Bellota"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/rodi.jpeg" alt="Rodi"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/rubi.jpeg" alt="Rubi"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/torneiras Monteiro.jpeg" alt="Torneiras Monteiro"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cimpor.jpeg" alt="Cimpor" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/secil.jpeg" alt="Secil" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Barbot.jpeg" alt="Barbot" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Dyrup.jpeg" alt="Dyrup" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/DeWalt.jpeg" alt="DeWalt" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/legrand.jpeg" alt="Legrand" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/valadares.jpeg" alt="Valadares" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/sanindusa.jpeg" alt="Sanindusa" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Efapel.jpeg" alt="Efapel" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/soudal.jpeg" alt="Soudal" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Saint gobian.jpeg" alt="Saint-Gobain" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/cinca.jpeg" alt="Cinca" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/margres.jpeg" alt="Margres" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/preceram.jpeg" alt="Preceram" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Aslo.jpeg" alt="Aslo" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cerpeg.jpeg" alt="Cerpeg" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cinhell.jpeg" alt="Einhell" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cs- Coelho da silva.jpeg" alt="Coelho da Silva" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Fassa bartolo.jpeg" alt="Fassa Bartolo" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Gresco.jpeg" alt="Gresco" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Inegco.jpeg" alt="Inegco" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Mebra.jpeg" alt="Mebra" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Pecol.jpeg" alt="Pecol" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Thomaz dos santos.jpeg" alt="Thomaz dos Santos" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/bellota.jpeg" alt="Bellota" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/rodi.jpeg" alt="Rodi" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/rubi.jpeg" alt="Rubi" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/torneiras Monteiro.jpeg" alt="Torneiras Monteiro" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -902,17 +893,14 @@
                         </div>
                     </div>
                     
-                    <!-- Mapa Incorporado de Localização -->
+                    <!-- Mapa Incorporado de Localização (Carregado por Intersection Observer para Performance) -->
                     <div class="map-wrapper">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12458.558334460715!2d-7.807890699999999!3d38.208889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1a3beea6701bbd%3A0x400ebbde49042b0!2sVidigueira!5e0!3m2!1spt-PT!2spt!4v1717258410293!5m2!1spt-PT!2spt" 
-                            width="100%" 
-                            height="220" 
-                            style="border:0; border-radius: 12px; margin-top: 30px;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        <div id="map-container" class="map-placeholder" style="border-radius: 12px; margin-top: 30px; height: 220px; background-color: rgba(100, 116, 139, 0.05); display: flex; justify-content: center; align-items: center; border: 1px dashed rgba(100, 116, 139, 0.2); overflow: hidden;">
+                            <div class="map-loading-text" style="color: var(--text-muted); font-size: 0.9rem; text-align: center; display: flex; flex-direction: column; gap: 8px; align-items: center;">
+                                <i class="fa-solid fa-spinner fa-spin" style="font-size: 1.5rem; color: var(--primary);"></i>
+                                <span>A carregar mapa de localização...</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1057,6 +1045,6 @@
     </a>
 
     <!-- JavaScript Customizado -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

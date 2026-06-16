@@ -238,17 +238,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isNameValid && isPhoneValid && isEmailValid && isTypeValid) {
             const submitBtn = document.getElementById('submitBtn');
+            const originalBtnText = submitBtn.innerHTML;
             
-            // Simular envio assíncrono (Loading UI)
+            // Iniciar Loading UI
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<span>A Enviar Orçamento...</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
 
-            setTimeout(() => {
-                // Simulação concluída com sucesso
-                quoteForm.style.display = 'none';
-                formSuccessAlert.style.display = 'block';
-                formSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 1500);
+            // Dados do formulário formatados
+            const formData = {
+                Nome: nameInput.value,
+                Telefone: phoneInput.value,
+                Email: emailInput.value,
+                "Categoria Pretendida": typeSelect.options[typeSelect.selectedIndex].text,
+                Mensagem: document.getElementById('userMessage').value || "Sem mensagem adicional."
+            };
+
+            // Envio assíncrono para o FormSubmit.co
+            fetch("https://formsubmit.co/ajax/juba.materiais@gmail.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Envio com sucesso
+                    quoteForm.style.display = 'none';
+                    formSuccessAlert.style.display = 'block';
+                    formSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error("Erro na resposta do servidor.");
+                }
+            })
+            .catch(error => {
+                console.error("Erro ao enviar formulário:", error);
+                alert("Ocorreu um erro ao processar o seu pedido. Por favor, tente enviar novamente ou contacte-nos por chamada telefónica.");
+                
+                // Restaurar botão de submissão em caso de falha
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
         } else {
             // Focar no primeiro elemento com erro
             const firstError = quoteForm.querySelector('.form-group.error input, .form-group.error select');
@@ -567,17 +598,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Alternância de abas de filtragem (Cozinha / Pavimentos)
         if (filterButtons.length > 0) {
+            const viewport = sliderTrack.parentElement;
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
+                    if (button.classList.contains('active')) return;
+                    
                     filterButtons.forEach(btn => btn.classList.remove('active'));
                     button.classList.add('active');
 
-                    activeFilter = button.getAttribute('data-filter');
-                    activeIndex = 0; // Reiniciar o carrossel no primeiro slide da nova categoria
+                    const targetFilter = button.getAttribute('data-filter');
 
-                    updateVisibleSlides();
-                    createIndicators();
-                    goToSlide(0);
+                    // Iniciar fade out do viewport
+                    if (viewport) viewport.classList.add('fade-out');
+
+                    // Aguardar o tempo da transição do fade out (250ms)
+                    setTimeout(() => {
+                        activeFilter = targetFilter;
+                        activeIndex = 0; // Reiniciar o carrossel no primeiro slide da nova categoria
+
+                        // Desativar transição da track temporariamente
+                        sliderTrack.classList.add('no-transition');
+
+                        updateVisibleSlides();
+                        createIndicators();
+                        goToSlide(0);
+
+                        // Forçar um reflow no browser para registar a mudança de translateX instantânea
+                        const reflow = sliderTrack.offsetHeight;
+
+                        // Reativar transição da track e iniciar o fade in
+                        sliderTrack.classList.remove('no-transition');
+                        if (viewport) viewport.classList.remove('fade-out');
+                    }, 250);
                 });
             });
         }
@@ -608,6 +660,40 @@ document.addEventListener('DOMContentLoaded', () => {
         updateVisibleSlides();
         createIndicators();
         goToSlide(0);
+    }
+
+    /* ==========================================================================
+       13. CARREGAMENTO ADIADO DO MAPA (LAZY LOADING DE GOOGLE MAPS)
+       ========================================================================== */
+    const mapContainer = document.getElementById('map-container');
+    if (mapContainer) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '300px', // Carregar a 300px de distância para uma experiência fluida
+            threshold: 0
+        };
+
+        const loadMap = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    mapContainer.innerHTML = `
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12458.558334460715!2d-7.807890699999999!3d38.208889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1a3beea6701bbd%3A0x400ebbde49042b0!2sVidigueira!5e0!3m2!1spt-PT!2spt!4v1717258410293!5m2!1spt-PT!2spt" 
+                            width="100%" 
+                            height="220" 
+                            style="border:0; border-radius: 12px; display: block;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    `;
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const mapObserver = new IntersectionObserver(loadMap, observerOptions);
+        mapObserver.observe(mapContainer);
     }
 });
 
