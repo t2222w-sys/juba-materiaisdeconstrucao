@@ -42,17 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuOverlay.addEventListener('click', toggleMenu);
     }
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navMenu.classList.contains('open')) {
-                toggleMenu();
-            }
-            
-            // Alterar link ativo visualmente
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
+    // Navegação e interceção tratadas de forma unificada no scroll suave (Secção 11)
 
     /* ==========================================================================
        3. SISTEMA DE DETEÇÃO DE HORÁRIO EM TEMPO REAL (ABERTO / FECHADO)
@@ -64,16 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const now = new Date();
         const day = now.getDay(); // 0: Domingo, 1: Segunda, ..., 6: Sábado
-        const month = now.getMonth(); // 0: Janeiro, ..., 11: Dezembro
         const hour = now.getHours();
         const minute = now.getMinutes();
         const timeInMinutes = hour * 60 + minute;
 
         let isOpen = false;
         let scheduleNote = "";
-
-        // Detetar se estamos no horário de Verão (Maio a Outubro, meses 4 a 9) ou Inverno
-        const isSummer = (month >= 4 && month <= 9);
 
         if (day === 0) {
             // Domingo
@@ -91,55 +77,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 scheduleNote = "Fechado (Sábado: funcionou das 08h00 às 12h00)";
             }
         } else {
-            // Segunda a Sexta
-            if (isSummer) {
-                // Verão: 07h30-13h00 e 15h00-19h00
-                const morningStart = 7 * 60 + 30;
-                const morningEnd = 13 * 60;
-                const afternoonStart = 15 * 60;
-                const afternoonEnd = 19 * 60;
+            // Segunda a Sexta: 08:00-13:00 e 15:00-18:00
+            const morningStart = 8 * 60;
+            const morningEnd = 13 * 60;
+            const afternoonStart = 15 * 60;
+            const afternoonEnd = 18 * 60;
 
-                if ((timeInMinutes >= morningStart && timeInMinutes < morningEnd) || 
-                    (timeInMinutes >= afternoonStart && timeInMinutes < afternoonEnd)) {
-                    isOpen = true;
-                    if (timeInMinutes < morningEnd) {
-                        scheduleNote = "Aberto (Horário de Verão: encerra às 13h00 para almoço)";
-                    } else {
-                        scheduleNote = "Aberto (Horário de Verão: encerra às 19h00)";
-                    }
+            if ((timeInMinutes >= morningStart && timeInMinutes < morningEnd) || 
+                (timeInMinutes >= afternoonStart && timeInMinutes < afternoonEnd)) {
+                isOpen = true;
+                if (timeInMinutes < morningEnd) {
+                    scheduleNote = "Aberto (encerra às 13h00 para almoço)";
                 } else {
-                    isOpen = false;
-                    if (timeInMinutes < morningStart) {
-                        scheduleNote = "Fechado (Abre hoje às 07h30 - Horário de Verão)";
-                    } else if (timeInMinutes >= morningEnd && timeInMinutes < afternoonStart) {
-                        scheduleNote = "Fechado para Almoço (Reabre hoje às 15h00)";
-                    } else {
-                        scheduleNote = "Fechado (Abre amanhã às 07h30 - Horário de Verão)";
-                    }
+                    scheduleNote = "Aberto (encerra às 18h00)";
                 }
             } else {
-                // Inverno: 08h00-13h00 e 14h30-18h30
-                const morningStart = 8 * 60;
-                const morningEnd = 13 * 60;
-                const afternoonStart = 14 * 60 + 30;
-                const afternoonEnd = 18 * 60 + 30;
-
-                if ((timeInMinutes >= morningStart && timeInMinutes < morningEnd) || 
-                    (timeInMinutes >= afternoonStart && timeInMinutes < afternoonEnd)) {
-                    isOpen = true;
-                    if (timeInMinutes < morningEnd) {
-                        scheduleNote = "Aberto (Horário de Inverno: encerra às 13h00 para almoço)";
-                    } else {
-                        scheduleNote = "Aberto (Horário de Inverno: encerra às 18h30)";
-                    }
+                isOpen = false;
+                if (timeInMinutes < morningStart) {
+                    scheduleNote = "Fechado (Abre hoje às 08h00)";
+                } else if (timeInMinutes >= morningEnd && timeInMinutes < afternoonStart) {
+                    scheduleNote = "Fechado para Almoço (Reabre hoje às 15h00)";
                 } else {
-                    isOpen = false;
-                    if (timeInMinutes < morningStart) {
-                        scheduleNote = "Fechado (Abre hoje às 08h00 - Horário de Inverno)";
-                    } else if (timeInMinutes >= morningEnd && timeInMinutes < afternoonStart) {
-                        scheduleNote = "Fechado para Almoço (Reabre hoje às 14h30)";
+                    if (day === 5) {
+                        scheduleNote = "Fechado (Abre amanhã, Sábado, às 08h00)";
                     } else {
-                        scheduleNote = "Fechado (Abre amanhã às 08h00 - Horário de Inverno)";
+                        scheduleNote = "Fechado (Abre amanhã às 08h00)";
                     }
                 }
             }
@@ -154,11 +116,9 @@ document.addEventListener('DOMContentLoaded', () => {
             statusText.innerHTML = `<span style="color: #E74C3C;">Loja Fechada</span> &bull; ${scheduleNote}`;
         }
 
-        // Destacar o horário atual na tabela descritiva do site
-        if (isSummer) {
-            weektimeText.innerHTML = `<strong>07:30 - 13:00 / 15:00 - 19:00 (Horário de Verão Ativo)</strong><br><span style="font-size: 0.8rem; opacity: 0.8;">Inverno: 08:00 - 13:00 / 14:30 - 18:30</span>`;
-        } else {
-            weektimeText.innerHTML = `07:30 - 13:00 / 15:00 - 19:00 (Verão)<br><strong>08:00 - 13:00 / 14:30 - 18:30 (Horário de Inverno Ativo)</strong>`;
+        // Indicação do horário de semana estático
+        if (weektimeText) {
+            weektimeText.innerHTML = `08:00 - 13:00 / 15:00 - 18:00`;
         }
     };
 
@@ -456,10 +416,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            const targetId = link.getAttribute('href').substring(1);
-            if (!targetId) return;
+            const href = link.getAttribute('href');
+            if (!href || href === '#') return;
 
-            const targetElement = document.getElementById(targetId);
+            let targetElement = null;
+            try {
+                targetElement = document.querySelector(href);
+            } catch (err) {
+                console.warn("Seletor inválido para âncora:", href);
+            }
+
             if (targetElement) {
                 e.preventDefault();
 
@@ -469,21 +435,77 @@ document.addEventListener('DOMContentLoaded', () => {
                     const selectEl = document.getElementById('materialType');
                     if (selectEl) {
                         selectEl.value = category;
-                        // Disparar o evento 'change' para limpar possíveis classes de erro visuais
                         const changeEvent = new Event('change');
                         selectEl.dispatchEvent(changeEvent);
                     }
                 }
 
-                // Calcular altura dinâmica da Navbar fixa para evitar sobreposições
-                const headerEl = document.querySelector('.main-header');
-                const offset = headerEl ? headerEl.offsetHeight : 80;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+                // Verificar se o menu móvel está aberto
+                const isMenuOpen = navMenu && navMenu.classList.contains('open');
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                if (isMenuOpen) {
+                    // Fechar o menu móvel suavemente
+                    mobileMenuBtn.classList.remove('open');
+                    navMenu.classList.remove('open');
+                    if (mobileMenuOverlay) {
+                        mobileMenuOverlay.classList.remove('open');
+                    }
+                    
+                    // Atualizar link ativo
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                } else {
+                    // Atualizar link ativo no desktop
+                    if (link.closest('.nav-menu')) {
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                }
+
+                // Cálculo preciso do offset da navbar
+                const navbarOffset = window.innerWidth <= 768 ? 80 : 90;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - navbarOffset;
+
+                if (isMenuOpen) {
+                    // Aguardar a conclusão da transição CSS do menu (350ms)
+                    // para libertar o body e iniciar o scroll suave nativo sem conflitos
+                    setTimeout(() => {
+                        document.body.classList.remove('overflow-hidden');
+                        try {
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        } catch (err) {
+                            window.scrollTo(0, offsetPosition);
+                        }
+                    }, 350);
+                } else {
+                    // Scroll suave imediato no desktop
+                    try {
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    } catch (err) {
+                        window.scrollTo(0, offsetPosition);
+                    }
+                }
+
+                // Atualizar o hash do URL de forma segura
+                try {
+                    if (history.pushState) {
+                        history.pushState(null, null, href);
+                    } else {
+                        window.location.hash = href;
+                    }
+                } catch (historyErr) {
+                    console.warn("Erro ao atualizar o histórico de navegação:", historyErr);
+                    try {
+                        window.location.hash = href;
+                    } catch (hashErr) {}
+                }
             }
         });
     });

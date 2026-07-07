@@ -257,11 +257,15 @@ section {
 
 .logo-link {
     display: block;
+    width: 182px;
+    height: 70px;
+    flex-shrink: 0;
 }
 
 .main-logo {
     height: 70px;
     width: auto;
+    max-width: none !important;
     object-fit: contain;
     transition: var(--transition);
 }
@@ -1239,6 +1243,10 @@ section {
 }
 
 @media (max-width: 768px) {
+    .main-header {
+        z-index: 1200;
+    }
+
     /* Header e Navegação */
     .header-container {
         padding: 10px 20px;
@@ -1248,8 +1256,17 @@ section {
         display: none; /* Oculta contacto no cabeçalho */
     }
     
+    .logo-link {
+        width: 125px;
+        height: 48px;
+        flex-shrink: 0;
+    }
+    
     .main-logo {
         height: 48px;
+        width: auto;
+        max-width: none !important;
+        object-fit: contain;
     }
     
     .mobile-cta {
@@ -1333,7 +1350,8 @@ section {
         align-items: center;
         justify-content: center;
         transition: var(--transition);
-        padding: 40px;
+        padding: 60px 30px 40px 30px;
+        overflow-y: auto;
     }
     
     .nav-menu.open {
@@ -1342,14 +1360,24 @@ section {
     
     .nav-menu ul {
         flex-direction: column;
-        gap: 30px;
+        gap: 15px;
         width: 100%;
         text-align: center;
     }
     
     .nav-menu a {
-        font-size: 1.15rem;
+        font-size: 1.05rem;
         display: block;
+        padding: 6px 0;
+    }
+
+    .nav-menu a.btn-nav {
+        margin-top: 10px;
+        padding: 10px 16px;
+        display: inline-block;
+        width: 100%;
+        max-width: 240px;
+        box-sizing: border-box;
     }
     
     .mobile-menu-btn.open .bar:nth-child(1) {
@@ -1371,9 +1399,7 @@ section {
         left: 0;
         width: 100%;
         height: 100vh;
-        background: rgba(13, 15, 18, 0.5);
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
+        background: rgba(13, 15, 18, 0.55);
         z-index: 1040;
         opacity: 0;
         visibility: hidden;

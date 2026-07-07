@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <!-- CSS Customizado -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2.13">
     
     <!-- Dados Estruturados Google (JSON-LD LocalBusiness) -->
     <script type="application/ld+json">
@@ -30,7 +30,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "JUBA Materiais de Construção",
-      "image": "https://localhost:8080/Logo/juba_logo_horizontal.png",
+      "image": "https://localhost:8080/Logo/juba_logo_transparente.png",
       "@id": "https://localhost:8080/#home",
       "url": "https://localhost:8080/",
       "telephone": "+351966041356",
@@ -58,8 +58,20 @@
             "Thursday",
             "Friday"
           ],
-          "opens": "07:30",
-          "closes": "19:00"
+          "opens": "08:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "15:00",
+          "closes": "18:00"
         },
         {
           "@type": "OpeningHoursSpecification",
@@ -89,7 +101,7 @@
     <header class="main-header" id="home">
         <div class="header-container">
             <a href="#home" class="logo-link">
-                <img src="Logo/juba_logo_horizontal.png" alt="JUBA Materiais de Construção" class="main-logo" id="mainLogo">
+                <img src="Logo/juba_logo_transparente.png" alt="JUBA Materiais de Construção" class="main-logo" id="mainLogo">
             </a>
             
             <nav class="nav-menu" id="navMenu">
@@ -210,7 +222,7 @@
                         <i class="fa-regular fa-clock"></i>
                         <div>
                             <h5>Segunda a Sexta-feira</h5>
-                            <p class="schedule-time" id="weektime">07:30 - 13:00 / 15:00 - 19:00 (Verão)<br>08:00 - 13:00 / 14:30 - 18:30 (Inverno)</p>
+                            <p class="schedule-time" id="weektime">08:00 - 13:00 / 15:00 - 18:00</p>
                         </div>
                     </div>
                     <div class="schedule-col border-left">
@@ -992,7 +1004,7 @@
         <div class="footer-top">
             <div class="container footer-grid">
                 <div class="footer-brand">
-                    <img src="Logo/juba_logo_horizontal.png" alt="JUBA Logo" class="footer-logo">
+                    <img src="Logo/juba_logo_transparente.png" alt="JUBA Logo" class="footer-logo">
                     <p>A sua referência no fornecimento de materiais de construção de confiança. Garantimos aconselhamento profissional e produtos certificados para obras residenciais, industriais e públicas.</p>
                 </div>
                 
@@ -1045,6 +1057,6 @@
     </a>
 
     <!-- JavaScript Customizado -->
-    <script src="script.js" defer></script>
+    <script src="script.js?v=2.13" defer></script>
 </body>
 </html>
