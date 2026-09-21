@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://juba-materiaisdeconstrucao.pages.dev/sitemap.xml
+Sitemap: https://jubamc.pt/sitemap.xml

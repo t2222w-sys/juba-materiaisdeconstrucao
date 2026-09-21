@@ -8,7 +8,7 @@
 - **Coordenadas GPS:** 38.208889, -7.8078907
 - **Telefone:** +351 966 041 356 / +351 969 325 291
 - **E-mail:** juba.materiais@gmail.com
-- **Website Oficial:** https://juba-materiaisdeconstrucao.pages.dev/
+- **Website Oficial:** https://jubamc.pt/ (acessível também via https://www.jubamc.pt/)
 
 ## Horário de Funcionamento
 - **Segunda a Sexta-feira:** 08:00 – 13:00 / 15:00 – 18:00
@@ -42,4 +42,4 @@ Secil, Barbot, Sanindusa, Weber, Sika, Bosch, entre outras marcas de referência
 - Cargas e descargas especializadas com transporte próprio para estaleiros de obra.
 
 ## Como Pedir Orçamento
-Os pedidos de cotação podem ser realizados online através do formulário oficial no website (com possibilidade de anexar listas de materiais em PDF ou Excel), por telefone (+351 966 041 356) ou através do WhatsApp oficial.
+Os pedidos de cotação podem ser realizados online através do formulário oficial no website https://jubamc.pt/ (com possibilidade de anexar listas de materiais em PDF ou Excel), por telefone (+351 966 041 356) ou através do WhatsApp oficial.

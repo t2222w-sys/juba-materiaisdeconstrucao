@@ -204,8 +204,11 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<span>A Enviar Orçamento...</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
 
-            // Dados do formulário formatados
+            // Dados do formulário formatados com metadados para FormSubmit
             const formData = {
+                _subject: "Novo Pedido de Orçamento - JUBA Materiais",
+                _template: "table",
+                _captcha: "false",
                 Nome: nameInput.value,
                 Telefone: phoneInput.value,
                 Email: emailInput.value,
@@ -222,14 +225,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 body: JSON.stringify(formData)
             })
-            .then(response => {
-                if (response.ok) {
-                    // Envio com sucesso
+            .then(response => response.json())
+            .then(data => {
+                if (data.success === "true" || data.success === true) {
+                    // Envio com sucesso confirmado
                     quoteForm.style.display = 'none';
                     formSuccessAlert.style.display = 'block';
                     formSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else if (data.message && data.message.toLowerCase().includes("activation")) {
+                    alert("Atenção: O formulário requer a ativação inicial. Foi enviado um e-mail de confirmação para juba.materiais@gmail.com. Por favor verifique a pasta de SPAM ou Promoções e clique em 'Activate Form' para concluir a configuração.");
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
                 } else {
-                    throw new Error("Erro na resposta do servidor.");
+                    throw new Error(data.message || "Erro no envio do formulário.");
                 }
             })
             .catch(error => {
