@@ -38,73 +38,134 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
     <!-- CSS Customizado -->
-    <link rel="stylesheet" href="style.css?v=2.15">
+    <link rel="stylesheet" href="style.css?v=2.16">
     
-    <!-- Dados Estruturados Google (JSON-LD LocalBusiness) -->
+    <!-- Dados Estruturados Google (JSON-LD LocalBusiness, HardwareStore & FAQPage) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "JUBA Materiais de Construção",
-      "image": "https://jubamc.pt/Logo/juba_logo_transparente.png",
-      "@id": "https://jubamc.pt/#home",
-      "url": "https://jubamc.pt/",
-      "telephone": "+351966041356",
-      "email": "juba.materiais@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Zona Industrial, Armazém JUBA",
-        "addressLocality": "Vidigueira",
-        "addressRegion": "Alentejo",
-        "postalCode": "7960",
-        "addressCountry": "PT"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 38.208889,
-        "longitude": -7.8078907
-      },
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
+          "@type": ["LocalBusiness", "HardwareStore"],
+          "@id": "https://jubamc.pt/#hardwarestore",
+          "name": "JUBA Materiais de Construção",
+          "image": "https://jubamc.pt/Logo/juba_logo_transparente.png",
+          "url": "https://jubamc.pt/",
+          "telephone": "+351966041356",
+          "email": "juba.materiais@gmail.com",
+          "priceRange": "€€",
+          "currenciesAccepted": "EUR",
+          "paymentAccepted": "Numerário, Cartão de Débito/Crédito, Transferência Bancária",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Zona Industrial, Armazém JUBA",
+            "addressLocality": "Vidigueira",
+            "addressRegion": "Alentejo",
+            "postalCode": "7960",
+            "addressCountry": "PT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 38.208889,
+            "longitude": -7.8078907
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:00",
+              "closes": "13:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "15:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "08:00",
+              "closes": "12:00"
+            }
           ],
-          "opens": "08:00",
-          "closes": "13:00"
+          "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": 38.208889,
+              "longitude": -7.8078907
+            },
+            "geoRadius": "25000"
+          }
         },
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "15:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "08:00",
-          "closes": "12:00"
+          "@type": "FAQPage",
+          "@id": "https://jubamc.pt/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Onde fica localizado o vosso armazém físico?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O nosso armazém está localizado na zona industrial da Vidigueira. Pode visitar-nos presencialmente para inspecionar os materiais de perto, receber aconselhamento técnico especializado ou levantar as suas encomendas diretamente."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Fazem entregas ao domicílio ou no local da obra?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. Dispomos de uma frota de transporte própria e adequada para cargas pesadas. Efetuamos entregas rápidas de materiais de construção diretamente no local da sua obra ou residência, num raio de até 25 km da Vidigueira."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual é o prazo de entrega dos materiais encomendados?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Para materiais em stock permanente no nosso armazém, as entregas costumam ser efetuadas no próprio dia ou no dia útil seguinte. Para materiais especiais sob consulta ou encomenda, acordamos o prazo de entrega diretamente consigo no ato do orçamento."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como posso obter um orçamento e quanto tempo demoram a responder?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "É muito simples: preencha o formulário de contacto no final deste site, envie-nos um e-mail com a sua lista de materiais ou fale connosco de forma instantânea através do WhatsApp. Comprometemo-nos a analisar o seu pedido e enviar uma proposta detalhada com preços justos em menos de 24 horas úteis."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vendem apenas a empresas de construção ou também a particulares?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Vendemos a ambos os públicos. Apoiamos desde o cliente particular que necessita de materiais e ferramentas para uma remodelação própria ou pequeno projeto, até empreiteiros, canalizadores, eletricistas e construtores civis que necessitam de volumes elevados de stock permanente e condições comerciais adequadas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quais são os métodos de pagamento aceites?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Aceitamos pagamentos por transferência bancária, numerário e cartões de débito/crédito no ato do levantamento em armazém ou no momento da entrega dos materiais de construção na sua obra."
+              }
+            }
+          ]
         }
-      ],
-      "areaServed": {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": 38.208889,
-          "longitude": -7.8078907
-        },
-        "geoRadius": "25000"
-      }
+      ]
     }
     </script>
 </head>
@@ -632,34 +693,34 @@
         <div class="brands-carousel-container">
             <div class="brands-track" id="brandsTrack">
                 <!-- As marcas serão clonadas em JS para carrossel infinito, mas listadas inicialmente para SEO/Fallbacks -->
-                <div class="brand-slide"><img src="Marcas parceiras/Cimpor.jpeg" alt="Cimpor" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/secil.jpeg" alt="Secil" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Barbot.jpeg" alt="Barbot" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Dyrup.jpeg" alt="Dyrup" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/DeWalt.jpeg" alt="DeWalt" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/legrand.jpeg" alt="Legrand" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/valadares.jpeg" alt="Valadares" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/sanindusa.jpeg" alt="Sanindusa" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Efapel.jpeg" alt="Efapel" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/soudal.jpeg" alt="Soudal" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Saint gobian.jpeg" alt="Saint-Gobain" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/cinca.jpeg" alt="Cinca" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/margres.jpeg" alt="Margres" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/preceram.jpeg" alt="Preceram" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Aslo.jpeg" alt="Aslo" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Cerpeg.jpeg" alt="Cerpeg" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Cinhell.jpeg" alt="Einhell" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Cs- Coelho da silva.jpeg" alt="Coelho da Silva" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Fassa bartolo.jpeg" alt="Fassa Bartolo" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Gresco.jpeg" alt="Gresco" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Inegco.jpeg" alt="Inegco" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Mebra.jpeg" alt="Mebra" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Pecol.jpeg" alt="Pecol" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/Thomaz dos santos.jpeg" alt="Thomaz dos Santos" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/bellota.jpeg" alt="Bellota" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/rodi.jpeg" alt="Rodi" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/rubi.jpeg" alt="Rubi" loading="lazy"></div>
-                <div class="brand-slide"><img src="Marcas parceiras/torneiras Monteiro.jpeg" alt="Torneiras Monteiro" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cimpor.jpeg" alt="Cimentos Cimpor - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/secil.jpeg" alt="Cimentos e Argamassas Secil - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Barbot.jpeg" alt="Tintas e Vernizes Barbot - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Dyrup.jpeg" alt="Tintas e Proteção de Madeiras Dyrup - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/DeWalt.jpeg" alt="Ferramentas Elétricas DeWalt - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/legrand.jpeg" alt="Material Elétrico Legrand - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/valadares.jpeg" alt="Loiças Sanitárias Valadares - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/sanindusa.jpeg" alt="Sanitários e Torneiras Sanindusa - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Efapel.jpeg" alt="Aparelhagem Elétrica Efapel - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/soudal.jpeg" alt="Silicones e Espumas Soudal - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Saint gobian.jpeg" alt="Sistemas e Isolamentos Saint-Gobain - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/cinca.jpeg" alt="Pavimentos e Cerâmicas Cinca - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/margres.jpeg" alt="Grés Porcelânico Margres - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/preceram.jpeg" alt="Tijolo Cerâmico Preceram - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Aslo.jpeg" alt="Iluminação e Material Elétrico Aslo - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cerpeg.jpeg" alt="Argamassas e Colas Cerpeg - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cinhell.jpeg" alt="Ferramentas Einhell - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Cs- Coelho da silva.jpeg" alt="Telhas Cerâmicas Coelho da Silva - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Fassa bartolo.jpeg" alt="Rebocos e Argamassas Fassa Bartolo - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Gresco.jpeg" alt="Cerâmica e Pavimentos Gresco - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Inegco.jpeg" alt="Tubagens e Sistemas Inegco - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Mebra.jpeg" alt="Ferragens e Fixações Mebra - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Pecol.jpeg" alt="Fixações e Parafusaria Pecol - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/Thomaz dos santos.jpeg" alt="Ferro e Estruturas Thomaz dos Santos - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/bellota.jpeg" alt="Ferramentas de Construção Bellota - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/rodi.jpeg" alt="Lava-louças e Acessórios Rodi - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/rubi.jpeg" alt="Cortadores de Cerâmica Rubi - Materiais na JUBA" loading="lazy"></div>
+                <div class="brand-slide"><img src="Marcas parceiras/torneiras Monteiro.jpeg" alt="Torneiras e Misturadoras Monteiro - Materiais na JUBA" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -1073,6 +1134,6 @@
     </a>
 
     <!-- JavaScript Customizado -->
-    <script src="script.js?v=2.15" defer></script>
+    <script src="script.js?v=2.16" defer></script>
 </body>
 </html>
